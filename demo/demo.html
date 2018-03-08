@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <title>封装ElementUI 下拉框 Dropdown组件</title>
 </head>
-
+<!--引入ElementUI 样式文件-->
 <link rel="stylesheet" href="../css/elementui-2.0.11.css">
+<!--引入vue.js -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!--引入ElementUI组件JS-->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<!--引入封装好的下拉框组件JS-->
 <script src="../components/dropDown.js"></script>
 
 <body>
     <div id="app">
-
+        <!--调用组件-->
         <drop-down :contents="dropdownComponents"></drop-down>
 
     </div>
 </body>
 
 <script>
+    //给下拉框组价填充内容
     var dropdownComponents = [
 
          {
@@ -51,6 +55,20 @@
                 'placement'     : 'bottom-end'
             }
          },
+         {
+            "title"  : '第3个下拉框组件',
+            "choices": [
+                '下拉框默认一',
+                '下拉框默认二',
+                '下拉框默认三',
+            ],
+            "configs":{
+                'type'          : 'primary',  
+                'size'          : 'mini', 
+                'trigger'       : 'hover',
+                'placement'     : 'bottom-end'
+            }
+         },
     ]
 
     new Vue({
@@ -62,7 +80,5 @@
         },
     })
 
-
-    
 </script>
 </html>

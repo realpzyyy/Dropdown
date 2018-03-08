@@ -8,8 +8,8 @@ Vue.component('drop-down', {
     props: ['contents'],
     template:
     '<div>'+
-        '<el-dropdown v-for="(content,index) in contents" :key="index" :trigger="uesDefaultConfigs(content.configs).trigger" :placement="uesDefaultConfigs(content.configs).placement" style="padding-right: 30px">'+
-          '<el-button :type="uesDefaultConfigs(content.configs).type" :size="uesDefaultConfigs(content.configs).size">'+
+        '<el-dropdown v-for="(content,index) in contents" :key="index" :trigger="useDefaultConfigs(content.configs).trigger" :placement="useDefaultConfigs(content.configs).placement" style="padding-right: 30px">'+
+          '<el-button :type="useDefaultConfigs(content.configs).type" :size="useDefaultConfigs(content.configs).size">'+
             '{{content.title}}<i class="el-icon-arrow-down el-icon--right"></i>'+
           '</el-button>'+
           '<el-dropdown-menu slot="dropdown">'+
@@ -19,9 +19,9 @@ Vue.component('drop-down', {
     '</div>',
     data: function () {
             return {
-                defaultConfigs : {
+                defaultConfigs : {   //下拉框组件默认配置参数 
                     'type'          : '',  
-                    'size'          : 'medium', 
+                    'size'          : '', 
                     'trigger'       : 'hover',
                     'placement'     : 'bottom-end'
                 },
@@ -29,7 +29,7 @@ Vue.component('drop-down', {
         },
     
     methods:{
-            uesDefaultConfigs  :function(configs){
+            useDefaultConfigs  :function(configs){
                 return configs ? configs : this.defaultConfigs
             }
         },
