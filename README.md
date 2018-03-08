@@ -6,6 +6,9 @@
 
 #### 一句话描述：用vue局部注册组件的方式封装ElementUI 下拉框组件
 
+效果展示：
+![](https://github.com/changechenyu/ShakeToFresh/blob/master/app/src/main/res/drawable/shake.gif)
+
 
 
 
