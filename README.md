@@ -18,8 +18,10 @@ step1： 引入ElementUI 和 VUE (推荐链接CDN)，以及以封装好的组件
 
 step2： 准备一个VUE实例、和一个下拉框内容对象<br>
 
-step3： 在想要加入下拉框的地方插入组件
-       <drop-down :contents="dropdownComponents"></drop-down>
+step3： 在想要加入下拉框的地方插入组件<br>
+```javascript      
+<drop-down :contents="dropdownComponents"></drop-down>
+```
        
        
 下拉框内容对象参数格式：<br>
@@ -38,9 +40,9 @@ step3： 在想要加入下拉框的地方插入组件
          'placement'     : ''         //   -- 菜单弹出位置
     }
 },
-```
 
-###configs对象中各参数指南
+
+### configs对象中各参数指南
 
 ### 参数                                                                 可选值                                   
 
