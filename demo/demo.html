@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装ElementUI 下拉框 Dropdown组件</title>
+</head>
+
+<link rel="stylesheet" href="../css/elementui-2.0.11.css">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../components/dropDown.js"></script>
+
+<body>
+    <div id="app">
+
+        <drop-down :contents="dropdownComponents"></drop-down>
+
+    </div>
+</body>
+
+<script>
+    var dropdownComponents = [
+
+         {
+            "title"  : '第一个下拉框组件',
+            "choices": [
+                '下拉框默认一',
+                '下拉框默认二',
+                '下拉框默认三',
+            ],
+            "configs":{
+                'type'          : 'success',  
+                'size'          : 'medium',  
+                'trigger'       : 'click',
+                'placement'     : 'bottom-start'
+            }
+
+         },
+         {
+            "title"  : '第二个下拉框组件',
+            "choices": [
+                '下拉框默认一',
+                '下拉框默认二',
+                '下拉框默认三',
+            ],
+            "configs":{
+                'type'          : 'warning',  
+                'size'          : 'small', 
+                'trigger'       : 'hover',
+                'placement'     : 'bottom-end'
+            }
+         },
+    ]
+
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                dropdownComponents : dropdownComponents,
+            }
+        },
+    })
+
+
+    
+</script>
+</html>
