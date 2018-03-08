@@ -8,8 +8,8 @@ Vue.component('drop-down', {
     props: ['contents'],
     template:
     '<div>'+
-        '<el-dropdown v-for="(content,index) in contents" :key="index" :trigger="content.configs.trigger" :placement="content.configs.placement" style="padding-right: 30px">'+
-          '<el-button :type="content.configs.type" :size="content.configs.size">'+
+        '<el-dropdown v-for="(content,index) in contents" :key="index" :trigger="uesDefaultConfigs(content.configs).trigger" :placement="uesDefaultConfigs(content.configs).placement" style="padding-right: 30px">'+
+          '<el-button :type="uesDefaultConfigs(content.configs).type" :size="uesDefaultConfigs(content.configs).size">'+
             '{{content.title}}<i class="el-icon-arrow-down el-icon--right"></i>'+
           '</el-button>'+
           '<el-dropdown-menu slot="dropdown">'+
@@ -19,15 +19,19 @@ Vue.component('drop-down', {
     '</div>',
     data: function () {
             return {
-                //defaultConfigs : dropdownComponents,
+                defaultConfigs : {
+                    'type'          : '',  
+                    'size'          : 'medium', 
+                    'trigger'       : 'hover',
+                    'placement'     : 'bottom-end'
+                },
             }
         },
-    computed:{
-            defaultConfigs:function(){
-                return primaryChoices.filter(function(primaryChoice){
-                    
-                });
-            },
-        }
+    
+    methods:{
+            uesDefaultConfigs  :function(configs){
+                return configs ? configs : this.defaultConfigs
+            }
+        },
 
 })
