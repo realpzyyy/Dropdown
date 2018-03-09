@@ -6,7 +6,7 @@
 
 #### 一句话描述：用vue局部注册组件的方式封装ElementUI 下拉框组件
 
-效果展示：
+效果展示：<br>
 ![](https://github.com/realpzyyy/Dropdown/blob/master/img/showdemo.png)
 
 
@@ -28,7 +28,7 @@ step3： 在想要加入下拉框的地方插入组件<br>
 ```javascript
 {
     "title"  : '第一个下拉框组件',      //下拉框标题       必填
-    "choices": [                       //下拉框中的选项   必填  不少于一条
+    "choices": [                      //下拉框中的选项   必填  不少于一条
          '下拉框默认一',
          '下拉框默认二',      
          '下拉框默认三',
@@ -44,7 +44,7 @@ step3： 在想要加入下拉框的地方插入组件<br>
 
 ### configs对象中各参数指南
 
-### 参数                                                                 可选值                                   
+### 参数                                       可选值                                   
 
      type                  primary / success / warning / danger / info / text	        
     
